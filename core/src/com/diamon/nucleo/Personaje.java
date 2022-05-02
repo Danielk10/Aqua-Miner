@@ -88,7 +88,7 @@ public abstract class Personaje extends Sprite {
 
 		this.tipoDeCuerpo = tipoDeCuerpo;
 
-		BodyDef bodyDef = new BodyDef();
+	/*	BodyDef bodyDef = new BodyDef();
 
 		FixtureDef fixtureDef = new FixtureDef();
 
@@ -140,7 +140,7 @@ public abstract class Personaje extends Sprite {
 
 			fixtureDef.friction = 0.5f;
 
-			fixtureDef.restitution = 1f;
+			fixtureDef.restitution = 0.3f;
 
 			if (mundoVirtual != null) {
 
@@ -149,12 +149,14 @@ public abstract class Personaje extends Sprite {
 				cuerpo.setUserData(this);
 
 				cuerpo.createFixture(fixtureDef);
+				
+				cuerpo.setActive(false);
 
 			}
 
 		}
 
-		shape.dispose();
+		shape.dispose();*/
 
 	}
 
@@ -432,6 +434,8 @@ public abstract class Personaje extends Sprite {
 		if (tipoDeCuerpo == Personaje.DIANAMICO) {
 
 			if (cuerpo != null) {
+				
+				cuerpo.setActive(true);
 
 				x = cuerpo.getPosition().x - this.getWidth() / 2;
 

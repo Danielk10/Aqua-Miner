@@ -38,7 +38,7 @@ public abstract class Juego extends Game {
 	@Override
 	public void dispose() {
 
-		 //recurso.dispose();
+		recurso.dispose();
 
 	}
 
