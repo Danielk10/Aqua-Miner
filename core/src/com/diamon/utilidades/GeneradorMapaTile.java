@@ -41,6 +41,47 @@ public class GeneradorMapaTile {
 
 	}
 
+	public int[] getFondoTile(int tiposTiles, int seccionMapa, int porsentajeTile) {
+
+		int[] fondo = new int[mapaTile.length];
+
+		for (int i = (this.mapaTile.length
+				- (this.mapaTile.length / this.seccionesMapa) * (this.seccionesMapa - seccionMapa))
+				- (this.mapaTile.length / this.seccionesMapa); i < (this.mapaTile.length
+						- (this.mapaTile.length / this.seccionesMapa) * (this.seccionesMapa - seccionMapa)); i++) {
+
+			if (fondo[i] == 0) {
+
+				if (i <= (((this.mapaTile.length / this.seccionesMapa) * porsentajeTile) / 100)) {
+
+					fondo[i] = 1;
+
+				} else {
+
+					fondo[i] = ((MathUtils.random(2) % 2) + 1);
+
+				}
+
+			}
+
+			if (mapaTile[i] != 0) {
+
+				if (i <= (((this.mapaTile.length / this.seccionesMapa) * porsentajeTile) / 100)) {
+
+					fondo[i] = 1;
+				} else {
+
+					fondo[i] = ((MathUtils.random(2) % 2) + 1);
+
+				}
+
+			}
+
+		}
+
+		return fondo;
+	}
+
 	public void setProbabilidadMastrarTile(int tipoTile, int seccionMapa, float probabilidad) {
 
 		for (int i = (this.mapaTile.length
@@ -50,7 +91,7 @@ public class GeneradorMapaTile {
 
 			if (MathUtils.random() * probabilidad > probabilidad / 2) {
 
-				int tileProbable = MathUtils.random(tipoTile);
+				int tileProbable = MathUtils.random(this.tiposTiles);
 
 				if (tileProbable == tipoTile) {
 

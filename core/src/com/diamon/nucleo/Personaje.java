@@ -88,75 +88,77 @@ public abstract class Personaje extends Sprite {
 
 		this.tipoDeCuerpo = tipoDeCuerpo;
 
-	/*	BodyDef bodyDef = new BodyDef();
-
-		FixtureDef fixtureDef = new FixtureDef();
-
-		PolygonShape shape = new PolygonShape();
-
-		shape.setAsBox(this.getWidth() / 2, this.getHeight() / 2);
-
-		fixtureDef.shape = shape;
-
-		if (tipoDeCuerpo == Personaje.ESTATICO) {
-
-			bodyDef.type = BodyDef.BodyType.StaticBody;
-
-			if (mundoVirtual != null) {
-
-				cuerpo = mundoVirtual.createBody(bodyDef);
-
-				cuerpo.setUserData(this);
-
-				cuerpo.createFixture(fixtureDef);
-
-			}
-
-		}
-
-		if (tipoDeCuerpo == Personaje.CINESTECICO) {
-
-			bodyDef.type = BodyDef.BodyType.KinematicBody;
-
-			if (mundoVirtual != null) {
-
-				cuerpo = mundoVirtual.createBody(bodyDef);
-
-				cuerpo.setUserData(this);
-
-				cuerpo.createFixture(fixtureDef);
-
-				cuerpo.setAngularVelocity(MathUtils.degreesToRadians * 360f);
-
-			}
-
-		}
-
-		if (tipoDeCuerpo == Personaje.DIANAMICO) {
-
-			bodyDef.type = BodyDef.BodyType.DynamicBody;
-
-			fixtureDef.density = 1f;
-
-			fixtureDef.friction = 0.5f;
-
-			fixtureDef.restitution = 0.3f;
-
-			if (mundoVirtual != null) {
-
-				cuerpo = mundoVirtual.createBody(bodyDef);
-
-				cuerpo.setUserData(this);
-
-				cuerpo.createFixture(fixtureDef);
-				
-				cuerpo.setActive(false);
-
-			}
-
-		}
-
-		shape.dispose();*/
+		/*
+		 * BodyDef bodyDef = new BodyDef();
+		 * 
+		 * FixtureDef fixtureDef = new FixtureDef();
+		 * 
+		 * PolygonShape shape = new PolygonShape();
+		 * 
+		 * shape.setAsBox(this.getWidth() / 2, this.getHeight() / 2);
+		 * 
+		 * fixtureDef.shape = shape;
+		 * 
+		 * if (tipoDeCuerpo == Personaje.ESTATICO) {
+		 * 
+		 * bodyDef.type = BodyDef.BodyType.StaticBody;
+		 * 
+		 * if (mundoVirtual != null) {
+		 * 
+		 * cuerpo = mundoVirtual.createBody(bodyDef);
+		 * 
+		 * cuerpo.setUserData(this);
+		 * 
+		 * cuerpo.createFixture(fixtureDef);
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * if (tipoDeCuerpo == Personaje.CINESTECICO) {
+		 * 
+		 * bodyDef.type = BodyDef.BodyType.KinematicBody;
+		 * 
+		 * if (mundoVirtual != null) {
+		 * 
+		 * cuerpo = mundoVirtual.createBody(bodyDef);
+		 * 
+		 * cuerpo.setUserData(this);
+		 * 
+		 * cuerpo.createFixture(fixtureDef);
+		 * 
+		 * cuerpo.setAngularVelocity(MathUtils.degreesToRadians * 360f);
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * if (tipoDeCuerpo == Personaje.DIANAMICO) {
+		 * 
+		 * bodyDef.type = BodyDef.BodyType.DynamicBody;
+		 * 
+		 * fixtureDef.density = 1f;
+		 * 
+		 * fixtureDef.friction = 0.5f;
+		 * 
+		 * fixtureDef.restitution = 0.3f;
+		 * 
+		 * if (mundoVirtual != null) {
+		 * 
+		 * cuerpo = mundoVirtual.createBody(bodyDef);
+		 * 
+		 * cuerpo.setUserData(this);
+		 * 
+		 * cuerpo.createFixture(fixtureDef);
+		 * 
+		 * cuerpo.setActive(false);
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * shape.dispose();
+		 */
 
 	}
 
@@ -194,73 +196,75 @@ public abstract class Personaje extends Sprite {
 
 		this.tipoDeCuerpo = tipoDeCuerpo;
 
-		BodyDef bodyDef = new BodyDef();
-
-		FixtureDef fixtureDef = new FixtureDef();
-
-		PolygonShape shape = new PolygonShape();
-
-		shape.setAsBox(this.getWidth() / 2, this.getHeight() / 2);
-
-		fixtureDef.shape = shape;
-
-		if (tipoDeCuerpo == Personaje.ESTATICO) {
-
-			bodyDef.type = BodyDef.BodyType.StaticBody;
-
-			if (mundoVirtual != null) {
-
-				cuerpo = mundoVirtual.createBody(bodyDef);
-
-				cuerpo.setUserData(this);
-
-				cuerpo.createFixture(fixtureDef);
-
-			}
-
-		}
-
-		if (tipoDeCuerpo == Personaje.CINESTECICO) {
-
-			bodyDef.type = BodyDef.BodyType.KinematicBody;
-
-			if (mundoVirtual != null) {
-
-				cuerpo = mundoVirtual.createBody(bodyDef);
-
-				cuerpo.setUserData(this);
-
-				cuerpo.createFixture(fixtureDef);
-
-				cuerpo.setAngularVelocity(MathUtils.degreesToRadians * 360f);
-
-			}
-
-		}
-
-		if (tipoDeCuerpo == Personaje.DIANAMICO) {
-
-			bodyDef.type = BodyDef.BodyType.DynamicBody;
-
-			fixtureDef.density = 1f;
-
-			fixtureDef.friction = 0.5f;
-
-			fixtureDef.restitution = 1f;
-
-			if (mundoVirtual != null) {
-
-				cuerpo = mundoVirtual.createBody(bodyDef);
-
-				cuerpo.setUserData(this);
-
-				cuerpo.createFixture(fixtureDef);
-
-			}
-
-		}
-
-		shape.dispose();
+		/*
+		 * BodyDef bodyDef = new BodyDef();
+		 * 
+		 * FixtureDef fixtureDef = new FixtureDef();
+		 * 
+		 * PolygonShape shape = new PolygonShape();
+		 * 
+		 * shape.setAsBox(this.getWidth() / 2, this.getHeight() / 2);
+		 * 
+		 * fixtureDef.shape = shape;
+		 * 
+		 * if (tipoDeCuerpo == Personaje.ESTATICO) {
+		 * 
+		 * bodyDef.type = BodyDef.BodyType.StaticBody;
+		 * 
+		 * if (mundoVirtual != null) {
+		 * 
+		 * cuerpo = mundoVirtual.createBody(bodyDef);
+		 * 
+		 * cuerpo.setUserData(this);
+		 * 
+		 * cuerpo.createFixture(fixtureDef);
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * if (tipoDeCuerpo == Personaje.CINESTECICO) {
+		 * 
+		 * bodyDef.type = BodyDef.BodyType.KinematicBody;
+		 * 
+		 * if (mundoVirtual != null) {
+		 * 
+		 * cuerpo = mundoVirtual.createBody(bodyDef);
+		 * 
+		 * cuerpo.setUserData(this);
+		 * 
+		 * cuerpo.createFixture(fixtureDef);
+		 * 
+		 * cuerpo.setAngularVelocity(MathUtils.degreesToRadians * 360f);
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * if (tipoDeCuerpo == Personaje.DIANAMICO) {
+		 * 
+		 * bodyDef.type = BodyDef.BodyType.DynamicBody;
+		 * 
+		 * fixtureDef.density = 1f;
+		 * 
+		 * fixtureDef.friction = 0.5f;
+		 * 
+		 * fixtureDef.restitution = 1f;
+		 * 
+		 * if (mundoVirtual != null) {
+		 * 
+		 * cuerpo = mundoVirtual.createBody(bodyDef);
+		 * 
+		 * cuerpo.setUserData(this);
+		 * 
+		 * cuerpo.createFixture(fixtureDef);
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * shape.dispose();
+		 */
 
 	}
 
@@ -434,7 +438,7 @@ public abstract class Personaje extends Sprite {
 		if (tipoDeCuerpo == Personaje.DIANAMICO) {
 
 			if (cuerpo != null) {
-				
+
 				cuerpo.setActive(true);
 
 				x = cuerpo.getPosition().x - this.getWidth() / 2;
