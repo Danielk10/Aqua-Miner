@@ -86,9 +86,8 @@ public class Oceano extends Nivel {
 
 		}
 
-		int[] fondo = generadorMapa.getFondoTile(2, 2, 40);
+		int[] fondo = generadorMapa.getFondoTile(2, 3, 2, 40);
 
-		
 		TiledMapTileLayer capaTilesFondo = (TiledMapTileLayer) mapa.getLayers().get(1);
 
 		TiledMapTileLayer capaTilesMinerales = (TiledMapTileLayer) mapa.getLayers().get(0);
@@ -165,7 +164,7 @@ public class Oceano extends Nivel {
 				{
 					tilesFondo[numeroTile].setRegion(texturas[1]);
 
-					//personajes.add(tilesFondo[numeroTile]);
+					personajes.add(tilesFondo[numeroTile]);
 
 				}
 

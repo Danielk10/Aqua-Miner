@@ -41,9 +41,15 @@ public class GeneradorMapaTile {
 
 	}
 
-	public int[] getFondoTile(int tiposTiles, int seccionMapa, int porsentajeTile) {
+	public int[] getFondoTile(int tipoTile1, int tipoTile2, int seccionMapa, int porsentajeTile) {
 
 		int[] fondo = new int[mapaTile.length];
+
+		int[] tile = new int[2];
+
+		tile[0] = tipoTile1;
+
+		tile[1] = tipoTile2;
 
 		for (int i = (this.mapaTile.length
 				- (this.mapaTile.length / this.seccionesMapa) * (this.seccionesMapa - seccionMapa))
@@ -52,13 +58,17 @@ public class GeneradorMapaTile {
 
 			if (fondo[i] == 0) {
 
-				if (i <= (((this.mapaTile.length / this.seccionesMapa) * porsentajeTile) / 100)) {
+				if (i <= seccionMapa * (((this.mapaTile.length
+						- (this.mapaTile.length / this.seccionesMapa) * (this.seccionesMapa - seccionMapa))
+						* porsentajeTile) / 100)) {
 
-					fondo[i] = 1;
+					fondo[i] = tile[0];
 
 				} else {
 
-					fondo[i] = ((MathUtils.random(2) % 2) + 1);
+					// fondo[i] = ((MathUtils.random(2) % 2) + 1);
+
+					fondo[i] = tile[((MathUtils.random(2) % 2))];
 
 				}
 
@@ -66,12 +76,15 @@ public class GeneradorMapaTile {
 
 			if (mapaTile[i] != 0) {
 
-				if (i <= (((this.mapaTile.length / this.seccionesMapa) * porsentajeTile) / 100)) {
+				if (i <= seccionMapa * (((this.mapaTile.length
+						- (this.mapaTile.length / this.seccionesMapa) * (this.seccionesMapa - seccionMapa))
+						* porsentajeTile) / 100)) {
 
-					fondo[i] = 1;
+					fondo[i] = tile[0];
+
 				} else {
 
-					fondo[i] = ((MathUtils.random(2) % 2) + 1);
+					fondo[i] = tile[((MathUtils.random(2) % 2))];
 
 				}
 
